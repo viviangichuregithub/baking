@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>contact</title>
+<link rel="stylesheet" href="contact.css">
+<script>
+function validateForm() {
+  var name = document.forms["contactForm"]["text"].value;
+  var email = document.forms["contactForm"]["email"].value;
+  var phone = document.forms["contactForm"]["tel"].value;
+  var area = document.forms["contactForm"]["text"].value;
+  var message = document.forms["contactForm"]["message"].value;
+
+  if (name == "" || email == "" || phone == "" || area == "" || message == "") {
+    alert("Please fill in all fields");
+    return false;
+  }
+
+  alert("Message sent!");
+  return true;
+}
+
+</script>
+</head>
+<body>
+<section class="hme">
+    <nav>
+        <ul>
+    <li><a href="baker.html">HOME</a></li>
+    <li><a href="about.html">ABOUT</a></li>
+    <li><a href="services.html">SERVICES</a></li>
+    <li><a href="contact.html">CONTACTS</a></li>
+    </ul>
+    </nav>
+</section>
+<section>
+<form name="contactForm" onsubmit="return validateForm()">
+<fieldset>
+<h1><u><b>Baked House</b></u></h1>
+<p>We are located in Spring valley,Nairobi.</p>
+<p>If you would like to contact us phone no.0742179262</p>
+<p>Email address:bakedhousebakery@gmail.com</p>
+<p>instagram account :Baked.House.bakery</p>
+<p>facebook account:Baked House Bakery</p>
+</p>
+<h2><u>Contact Us📞</u></h2>
+<p>
+<label>Name :</label>
+<input type="text" name="text" class="input-field" required></input></br>
+<span class="error"></span>
+</p>
+<p>Email: <input type="email" name="email" class="input-field" required></input>
+<span class="error"></span></p>
+<p>Phone no. <input type="tel" name="tel" class="input-field" required></input></br>
+<span class="error"></span></p>
+
+<p>Comment or write your message here<br>
+<textarea name="message" class="input-field" required></textarea>
+<span class="error"></span>
+</p>
+<p><input type="submit" name="submit"></input>
+<input type="reset" value="clear"></input>
+</br></p>
+</fieldset>
+</form>
+</section>
+</body>
+<html>
